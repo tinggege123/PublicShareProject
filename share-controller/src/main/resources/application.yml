@@ -7,4 +7,19 @@ eureka:
 spring:
   application:
     name: share-controller
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    ##全局方法使用default
+    HelloClient#toHello():
+      execution:
+        isolation:
+          thread:
+            ##超时时间
+            timeoutInMilliseconds: 500
+      circuitBreaker:
+        ##每秒3次请求
+        requestVolumeThreshold: 3
 

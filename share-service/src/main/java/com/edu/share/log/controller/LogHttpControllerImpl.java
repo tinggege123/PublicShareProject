@@ -2,6 +2,7 @@ package com.edu.share.log.controller;
 
 import com.edu.share.rpc.LogHttpController;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
