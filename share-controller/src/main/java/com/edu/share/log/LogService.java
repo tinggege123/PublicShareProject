@@ -1,5 +1,6 @@
 package com.edu.share.log;
 
+import com.edu.share.rpc.LogHttpController;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -16,6 +17,9 @@ public class LogService {
     @Resource
     private RestTemplate restTemplate;
 
+    @Resource
+    private LogHttpController logHttpController;
+
     /**
      * 熔断错误回调方法
      *
@@ -31,7 +35,12 @@ public class LogService {
      * @return
      */
     @HystrixCommand(defaultFallback = "helloFallBack")
-    public String helloService() {
+    public String hiService() {
         return restTemplate.getForObject("http://share-service/test", String.class);
+    }
+
+
+    public String helloService(String str){
+        return logHttpController.test(str);
     }
 }

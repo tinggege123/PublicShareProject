@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * 
- *
  * @author wst
  * @date 2019/4/17 15:53
  */
@@ -18,7 +16,12 @@ public class LogController {
     private LogService logService;
 
     @RequestMapping("hi")
-    public String hi(){
-        return logService.helloService();
+    public String hi() {
+        return logService.hiService();
+    }
+
+    @RequestMapping("hello")
+    public String hello(String str) {
+        return logService.helloService(str);
     }
 }

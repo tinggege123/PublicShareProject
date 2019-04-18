@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.edu</groupId>
-    <artifactId>share-service</artifactId>
+    <artifactId>share-api</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <dependencyManagement>
@@ -46,11 +46,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.edu</groupId>
-            <artifactId>share-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
