@@ -11,5 +11,6 @@ public class ShareServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(ShareServiceApplication.class, args);
     }
+
 }
 
